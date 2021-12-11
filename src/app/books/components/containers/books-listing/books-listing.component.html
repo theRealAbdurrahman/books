@@ -1,0 +1,9 @@
+<mat-form-field>
+  <mat-label>Search by title or date</mat-label>
+  <input matInput type="text" (keyup)="searchBooks($event)" />
+</mat-form-field>
+
+<app-book-card
+  *ngFor="let book of filteredBooksList"
+  [book]="book"
+></app-book-card>
